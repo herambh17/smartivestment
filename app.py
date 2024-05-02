@@ -121,7 +121,7 @@ data_training_scaled = scalar.fit_transform(data_training)
 
 
 
-model=pickle.load(open('model.sav','rb'))
+model=load_model('my_model.h5')
 
 
 past_60 = data_training.tail(60)
