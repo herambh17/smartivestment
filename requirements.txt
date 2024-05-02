@@ -1,8 +1,8 @@
 yfinance
 urllib3
 
-tensorflow
-
+tensorflow==2.15.0
+keras==2.15.0
 
 stack-data
 streamlit
