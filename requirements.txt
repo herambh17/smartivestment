@@ -1,4 +1,4 @@
-yfinance
+yfinance==0.2.38
 urllib3
 
 tensorflow==2.15.0
@@ -12,7 +12,7 @@ scipy
 seaborn
 pandas-datareader
 pandas
-numpy
+numpy==1.25.0
 matplotlib
 
 
