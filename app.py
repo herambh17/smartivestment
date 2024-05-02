@@ -15,6 +15,7 @@ from keras.layers import Dense
 from keras.layers import LSTM
 from keras.layers import Dropout
 from tensorflow.keras.models import load_model
+from tensorflow.keras.initializers import Orthogonal
 
 from sklearn.metrics import r2_score
 
@@ -120,8 +121,8 @@ scalar = MinMaxScaler()
 data_training_scaled = scalar.fit_transform(data_training)
 
 
-
-model=load_model('my_model.h5')
+custom_objects = {'Orthogonal': Orthogonal}
+model = load_model('my_model.h5', custom_objects=custom_objects)
 
 
 past_60 = data_training.tail(60)
