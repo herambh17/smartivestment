@@ -121,9 +121,8 @@ scalar = MinMaxScaler()
 data_training_scaled = scalar.fit_transform(data_training)
 
 
-custom_objects = {'Orthogonal': Orthogonal}
-model = load_model('my_model.h5', custom_objects=custom_objects)
 
+model=load_model('my_model.h5')
 
 past_60 = data_training.tail(60)
 dt = pd.concat([past_60, data_testing], ignore_index=True)
